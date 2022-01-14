@@ -1,106 +1,90 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF App</title>
+  <title>My LIFF app</title>
+  <link rel="stylesheet" href="css/style.css" media="all">
 </head>
 <body>
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.5.0/sdk.js"></script>
+  <p id="os"><b>OS:</b> </p>
+  <p id="language"><b>Language:</b> </p>
+  <p id="version"><b>Version:</b> </p>
+  <p id="isInClient"><b>isInClient:</b> </p>
+  <p id="accessToken"><b>AccessToken:</b> </p>
+  <img id="pictureUrl">
+  <p id="userId"><b>userId:</b> </p>
+  <p id="displayName"><b>displayName:</b> </p>
+  <p id="statusMessage"><b>statusMessage:</b> </p>
+  <p id="decodedIDToken"><b>email:</b> </p>
+  <p id="type"><b>type:</b> </p>
+  <p id="viewType"><b>viewType:</b> </p>
+  <p id="utouId"><b>utouId:</b> </p>
+  <p id="roomId"><b>roomId:</b> </p>
+  <p id="groupId"><b>groupId:</b> </p>
+  <p id="friendship"><b>isFriendship:</b> </p>
+  <p id="scanCode"><b>Code:</b> </p>
+  <p id="isLoggedIn"><b>isLoggedIn:</b> </p>
+  <p id="universalLink1"><b>Universal Link:</b> </p>
+  <p id="universalLink2"><b>Universal Link with Query params:</b> </p>
+  <p><a href="liff/path/?param=9">Link to Path</a></p>
+
+  <button id="btnMsg" onclick="sendMsg()">Send Message</button>
+  <button id="btnShare" onclick="shareMsg()">Share Target Picker</button>
+  <button onclick="openWindow()">Open Window</button>
+  <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <button id="btnClose" onclick="closed()">Close</button>
+
+  <!-- <script src="js/vconsole.min.js"></script> -->
+  <!-- <script>
+    var vConsole = new VConsole()
+    console.log("Hello World!")
+  </script> -->
+
+  <!-- <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script> -->
   <script>
+    function createUniversalLink() {
+    }
+
+    async function shareMsg() {
+    }
+
+    function logOut() {
+    }
+
+    function closed() {
+    }
+
+    async function scanCode() {
+    }
+
+    function openWindow() {
+    }
+
+    async function getFriendship() {
+    }
+
+    async function sendMsg() {
+    }
+
+    function getContext() {
+    }
+
+    async function getUserProfile() {
+    }
+
+    function getEnvironment() {
+    }
+
     async function main() {
-      await liff.init({ liffId: "1656792823-YV26MXpE" })
-      await liff.shareTargetPicker([
-        {
-          "type": "flex",
-          "altText": "Flex Message",
-          "contents": {
-  "type": "bubble",
-  "direction": "ltr",
-  "hero": {
-    "type": "image",
-    "url": "https://sv1.picz.in.th/images/2022/01/06/nhECvq.jpg",
-    "size": "full",
-    "aspectRatio": "1:1",
-    "aspectMode": "fit",
-    "backgroundColor": "#000000FF"
-  },
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "backgroundColor": "#100E0FFF",
-    "borderColor": "#000000FF",
-    "contents": [
-      {
-        "type": "text",
-        "text": "⭐ รับได้เลย 50 บาท ⭐",
-        "color": "#FF0000FF",
-        "align": "center",
-        "contents": []
-      },
-      {
-        "type": "text",
-        "text": "⭐⭐⭐⭐⭐ 4.5",
-        "size": "xs",
-        "color": "#FFFFFFFF",
-        "align": "start",
-        "contents": []
-      },
-      {
-        "type": "text",
-        "text": "ไม่ต้องฝากไม่ต้องลุ้น",
-        "size": "md",
-        "color": "#FFFFFFFF",
-        "contents": []
-      },
-      {
-        "type": "text",
-        "text": "พิเศษ... 1 สิทธิ์ ต่อ 1ท่าน",
-        "size": "sm",
-        "color": "#FF00CAFF",
-        "contents": []
-      },
-      {
-        "type": "text",
-        "text": "ให้ฟรี... เล่นสล็อต ยิงปลาได้",
-        "size": "sm",
-        "color": "#FF00CAFF",
-        "contents": []
-      }
-    ]
-  },
-  "footer": {
-    "type": "box",
-    "layout": "horizontal",
-    "backgroundColor": "#000000FF",
-    "borderColor": "#000000FF",
-    "contents": [
-      {
-        "type": "button",
-        "action": {
-          "type": "uri",
-          "label": "สมัครสมาชิก",
-          "uri": "https://lin.ee/rGFgPlJ"
-        },
-        "color": "#00FF01FF",
-        "height": "sm"
-      },
-      {
-        "type": "button",
-        "action": {
-          "type": "uri",
-          "label": "กดแชร์",
-          "uri": "https://liff.line.me/1656792823-YV26MXpE"
-        },
-        "color": "#0CFF1EFF",
-        "height": "sm"
-      }
-    ]
-  }
-}
-        }
-      ])
-      liff.closewindow()
+      alert("LINE Developers x Skooldio")
+      await liff.init({ liffId: "YOUR-LIFF-ID" })
+      // getEnvironment()
+      // getUserProfile()
+      // getContext()
+      // getFriendship()
+      // createUniversalLink()
     }
     main()
   </script>
